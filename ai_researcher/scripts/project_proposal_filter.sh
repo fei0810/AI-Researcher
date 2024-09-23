@@ -8,9 +8,9 @@ seed=2024
 for cache_name in "${cache_names[@]}"; do
     echo "Running filter_ideas.py with cache_name: $cache_name"
     python3 src/filter_ideas.py \
-    --engine "claude-3-5-sonnet-20240620" \
-    --cache_dir "$cache_dir" \
-    --cache_name "$cache_name" \
-    --passed_cache_dir "$passed_cache_dir" \
-    --score_file "../cache_results_test/ranking/$cache_name/round_5.json" 
+        --engine "claude-3-haiku-20240307" \
+        --cache_dir "$cache_dir" \
+        --cache_name "$cache_name" \
+        --passed_cache_dir "$passed_cache_dir" \
+        --score_file "../cache_results_test/ranking/$cache_name/round_5.json"
 done
